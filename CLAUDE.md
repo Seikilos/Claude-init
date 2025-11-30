@@ -22,6 +22,25 @@ Apply the following coding guidelines. If you decide to deviate from them, expla
 
 ## ⚠️ CRITICAL WORKFLOW RULES ⚠️
 
+### **🚨 NODE.JS PROJECT REQUIREMENTS - ABSOLUTE PRIORITY 🚨**
+- 🔴 **MANDATORY**: NEVER use npm in Node.js projects
+- 🔴 **MANDATORY**: ALWAYS use pnpm instead of npm for ALL Node.js operations
+- 🔴 **MANDATORY**: When creating a new Node.js project, NEVER use npm - only pnpm
+- 🔴 **MANDATORY**: Create a `.npmrc` file with these exact settings:
+  ```
+  ignore-scripts=true
+  minimum-release-age=30d
+  ```
+- 🔴 This means:
+  - ❌ NO `npm install`
+  - ❌ NO `npm run`
+  - ❌ NO `npm init`
+  - ❌ NO `npm ci`
+  - ✅ USE `pnpm install`
+  - ✅ USE `pnpm run`
+  - ✅ USE `pnpm init`
+  - ✅ USE `pnpm` for all package management
+
 ### **COMMIT AFTER EVERY COMPLETED TASK**
 - 🔴 **MANDATORY**: Use git to commit changes immediately after finishing each logical unit of work
 - 🔴 **NEVER** accumulate multiple completed tasks without committing
